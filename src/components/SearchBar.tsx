@@ -123,58 +123,60 @@ const SearchBar = () => {
     };
 
     return (
-        <div className="flex relative gap-[12px] h-fit">
-            <div 
-                onClick={handleSearchClick}
-                ref={searchBox} 
-                className="h-[36px] z-[1] absolute left-0 cursor-pointer w-[36px] flex justify-start pl-[9px] items-center rounded-full bg-zinc-100 shadow-zinc-400/50 shadow-[0px_0px_8px] ">
-                <svg ref={searchIcon} xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-search">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-                    <path d="M21 21l-6 -6" />
-                </svg>
-            </div>
-            <div ref={optionsBox} className="h-[36px] w-fit flex justify-center items-center gap-[8px] rounded-full p-[2px] bg-zinc-100 shadow-zinc-400/70 shadow-[0px_0px_8px] absolute left-[48px] ">
-                <div 
-                    onClick={() => handleOptionClick(0)}
-                    className="h-full px-[8px] cursor-pointer w-fit flex justify-center items-center gap-[6px] rounded-full">
-                    <svg ref={iconFire} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="black" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-flame">
+        <div className="absolute left-[50%] -translate-x-[130px] md:-translate-x-[98px]">
+            <div className="flex relative gap-[12px] h-fit">
+                <div
+                    onClick={handleSearchClick}
+                    ref={searchBox}
+                    className="h-[36px] z-[1] absolute left-0 cursor-pointer w-[36px] flex justify-start pl-[9px] items-center rounded-full bg-zinc-100 shadow-zinc-400/50 shadow-[0px_0px_8px] ">
+                    <svg ref={searchIcon} xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-search">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M12 10.941c2.333 -3.308 .167 -7.823 -1 -8.941c0 3.395 -2.235 5.299 -3.667 6.706c-1.43 1.408 -2.333 3.621 -2.333 5.588c0 3.704 3.134 6.706 7 6.706s7 -3.002 7 -6.706c0 -1.712 -1.232 -4.403 -2.333 -5.588c-2.084 3.353 -3.257 3.353 -4.667 2.235" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M21 21l-6 -6" />
                     </svg>
-                    <span ref={textPopular} className="font-sans font-[600] ">
-                        Popular
-                    </span>
                 </div>
-                <div 
-                    onClick={() => handleOptionClick(1)}
-                    className="h-full w-fit cursor-pointer px-[8px] flex justify-center gap-[6px] items-center rounded-full">
-                    <svg ref={iconHeart} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="black" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-heart">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                    </svg>
-                    <span ref={textFavorites} className="font-sans font-[600] ">
-                        Favorites
-                    </span>
+                <div ref={optionsBox} className="h-[36px] w-fit flex justify-center items-center gap-[8px] rounded-full p-[2px] bg-zinc-100 shadow-zinc-400/70 shadow-[0px_0px_8px] absolute left-[48px] ">
+                    <div
+                        onClick={() => handleOptionClick(0)}
+                        className="h-full px-[8px] cursor-pointer w-fit flex justify-center items-center gap-[6px] rounded-full">
+                        <svg ref={iconFire} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="black" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-flame">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 10.941c2.333 -3.308 .167 -7.823 -1 -8.941c0 3.395 -2.235 5.299 -3.667 6.706c-1.43 1.408 -2.333 3.621 -2.333 5.588c0 3.704 3.134 6.706 7 6.706s7 -3.002 7 -6.706c0 -1.712 -1.232 -4.403 -2.333 -5.588c-2.084 3.353 -3.257 3.353 -4.667 2.235" />
+                        </svg>
+                        <span ref={textPopular} className="font-sans font-[600] ">
+                            Popular
+                        </span>
+                    </div>
+                    <div
+                        onClick={() => handleOptionClick(1)}
+                        className="h-full w-fit cursor-pointer px-[8px] flex justify-center gap-[6px] items-center rounded-full">
+                        <svg ref={iconHeart} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="black" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-heart">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                        </svg>
+                        <span ref={textFavorites} className="font-sans font-[600] ">
+                            Favorites
+                        </span>
+                    </div>
+                    <div
+                        ref={optionsOverlay}
+                        style={{
+                            height: 'calc(100% - 4px)',
+                            left: '2px',
+                        }}
+                        className=" w-[96px] opacity-20 bg-red-600 absolute top-[2px] rounded-full cursor-pointer"
+                    />
                 </div>
                 <div
-                    ref={optionsOverlay}
-                    style={{
-                        height: 'calc(100% - 4px)',
-                        left: '2px',
-                    }} 
-                    className=" w-[96px] opacity-20 bg-red-600 absolute top-[2px] rounded-full cursor-pointer"
-                />
-            </div>
-            <div
-                onClick={handleXClick}
-                ref={iconXBox}
-                className="h-[36px] opacity-0 pointer-events-none blur-[2px] z-[1] absolute right-[-265px] cursor-pointer w-[36px] flex justify-start pl-[9px] items-center rounded-full bg-zinc-100 shadow-zinc-400/70 shadow-[0px_0px_8px] ">
-                <svg ref={iconX} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-x">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M18 6l-12 12" />
-                    <path d="M6 6l12 12" />
-                </svg>
+                    onClick={handleXClick}
+                    ref={iconXBox}
+                    className="h-[36px] opacity-0 pointer-events-none blur-[2px] z-[1] absolute right-[-265px] cursor-pointer w-[36px] flex justify-start pl-[9px] items-center rounded-full bg-zinc-100 shadow-zinc-400/70 shadow-[0px_0px_8px] ">
+                    <svg ref={iconX} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-x">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M18 6l-12 12" />
+                        <path d="M6 6l12 12" />
+                    </svg>
+                </div>
             </div>
         </div>
     )

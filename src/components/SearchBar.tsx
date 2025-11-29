@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import { useRef } from "react";
 
-const sliderColor = '#FAD7D4';
 const selectedOptionTextColor = '#E54533';
 
 const SearchBar = () => {
